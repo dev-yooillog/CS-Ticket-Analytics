@@ -1,0 +1,11 @@
+queue,total_tickets,high_count,medium_count,low_count,incident_count,request_count,pct_of_total,high_rate_pct
+Technical Support,8361,4899,2536,926,4334,1684,29.25,58.59
+Product Support,5249,1554,2637,1058,2306,1196,18.37,29.61
+Customer Service,4267,805,1966,1496,1073,1969,14.93,18.87
+IT Support,3433,1677,1451,305,1244,735,12.01,48.85
+Billing and Payments,2786,850,1334,602,674,1338,9.75,30.51
+Returns and Exchanges,1437,307,599,531,568,391,5.03,21.36
+Service Outages and Maintenance,1148,815,201,132,630,166,4.02,70.99
+Sales and Pre-Sales,918,161,425,332,203,442,3.21,17.54
+Human Resources,576,55,235,286,316,173,2.02,9.55
+General Inquiry,405,52,128,225,117,91,1.42,12.84

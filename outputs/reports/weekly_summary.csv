@@ -1,0 +1,10 @@
+metric,value
+total_tickets,28580
+high_priority_count,11175
+high_priority_pct,39.1
+incident_count,11465
+incident_pct,40.12
+en_count,16335
+de_count,12245
+top_queue,Technical Support
+top_queue_count,8361
