@@ -19,6 +19,7 @@ Customer Support 티켓 데이터를 분석하여 문의 유형별 볼륨 KPI,
 ---
 
 ## Project Structure
+```
 cs-ticket-analytics/
 |-- data/
 |   |-- raw/
@@ -41,7 +42,7 @@ cs-ticket-analytics/
 |       |-- weekly_summary.csv
 |
 |-- requirements.txt
-
+```
 ---
 
 ---
