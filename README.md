@@ -29,6 +29,7 @@
 ---
 
 ## 분석 과정
+```
 데이터 정제 (01)
 subject 결측 처리 / answer 결측 7건 제거 / tag 컬럼 통합
 볼륨 KPI 집계 (02)
@@ -41,6 +42,8 @@ TF-IDF + Logistic Regression으로 4개 유형 분류
 TF-IDF + queue 피처 결합 / LR vs Random Forest 비교
 주간 KPI 리포트 자동 생성 (06)
 전체 지표 종합 대시보드 + CSV 저장
+```
+
 ---
 
 ## 인사이트
