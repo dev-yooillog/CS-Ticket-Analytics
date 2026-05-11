@@ -1,6 +1,49 @@
 # CS Ticket Analytics
 ### Contact Volume KPI 모니터링 및 문의 유형 자동 분류 시스템
 
+Customer Support 티켓 데이터를 분석하여 문의 유형별 볼륨 KPI,
+반복 문의 드라이버, 우선순위 예측 모델을 구축한 end-to-end 분석 프로젝트입니다.
+
+---
+
+## Dataset
+
+| 파일 | 건수 | 비고 |
+|---|---|---|
+| aa_dataset-tickets-multi-lang-5-2-50-version.csv | 28,580건 | 메인 분석용 |
+| dataset-tickets-multi-lang-4-20k.csv | 20,000건 | 보조 검증용 |
+| dataset-tickets-multi-lang3-4k.csv | 4,000건 | business_type 추가 분석 |
+
+**주요 컬럼:** subject, body, answer, type, queue, priority, language, tag_1 ~ tag_8
+
+---
+
+## Project Structure
+cs-ticket-analytics/
+|-- data/
+|   |-- raw/
+|   |-- processed/
+|       |-- tickets_clean.csv
+|       |-- weekly_kpi.csv
+|
+|-- notebooks/
+|   |-- 01_eda.ipynb
+|   |-- 02_inquiry_volume_kpi.ipynb
+|   |-- 03_tag_repeat_analysis.ipynb
+|   |-- 04_classification_model.ipynb
+|   |-- 05_priority_prediction.ipynb
+|   |-- 06_weekly_report.ipynb
+|
+|-- outputs/
+|   |-- figures/
+|   |-- reports/
+|       |-- weekly_kpi_sample.csv
+|       |-- weekly_summary.csv
+|
+|-- requirements.txt
+
+---
+
 ---
 
 ## 문제 상황
@@ -141,29 +184,35 @@ TF-IDF + Logistic Regression은 해석이 가능하고
 | 실행 환경 | Jupyter Notebook |
 
 ---
-
 ## How to Run
 
 ```bash
+# 1. 패키지 설치
 pip install -r requirements.txt
+
+# 2. 데이터 배치
+data/raw/ 폴더에 CSV 파일 3개 배치
+
+# 3. 노트북 순서대로 실행
+01_eda.ipynb
+02_inquiry_volume_kpi.ipynb
+03_tag_repeat_analysis.ipynb
+04_classification_model.ipynb
+05_priority_prediction.ipynb
+06_weekly_report.ipynb
 ```
-
-notebooks/ 폴더의 파일을 01부터 순서대로 실행합니다.
-01_eda.ipynb 실행 후 data/processed/tickets_clean.csv 가 생성되어야
-이후 노트북이 정상 실행됩니다.
-
 ---
 
 ## Output 
 
 ### Weekly KPI Dashboard
-![weekly dashboard](../outputs/figures/06_weekly_dashboard.png)
+<img width="1715" height="1374" alt="06_weekly_dashboard" src="https://github.com/user-attachments/assets/ce3ecce7-8a08-464a-8905-1c25da92fb2a" />
 
 ### Priority Risk by Queue
-![priority heatmap](../outputs/figures/02_priority_heatmap.png)
+<img width="960" height="720" alt="02_priority_heatmap" src="https://github.com/user-attachments/assets/b13f029d-e552-4b22-a939-85cefd4ecf19" />
 
 ### Repeat Inquiry Drivers
-![tag cooccurrence](../outputs/figures/03_tag_cooccurrence.png)
+<img width="960" height="600" alt="05_model_comparison" src="https://github.com/user-attachments/assets/595e6ab5-3eeb-4f8a-8bf4-8b46f790f6e0" />
 
 ### Priority Prediction - Model Comparison
-![model comparison](../outputs/figures/05_model_comparison.png)
+<img width="1200" height="720" alt="03_tag_cooccurrence" src="https://github.com/user-attachments/assets/4b186384-6238-4921-9dcd-c1252dafaf1a" />
